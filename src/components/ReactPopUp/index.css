@@ -1,0 +1,35 @@
+.popup-container {
+  position: fixed;
+  margin: auto auto;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-inner-container {
+  position: relative;
+  padding: 16px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup-close-button {
+  align-self: flex-end;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000;
+}
+.popup-close-button-icon {
+  font-size: 24px;
+}
