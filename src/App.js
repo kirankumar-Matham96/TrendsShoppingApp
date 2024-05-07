@@ -1,8 +1,5 @@
 import { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-// import { Routes, Route, Redirect } from "react-router-dom";
-// import { Routes, Route, Navigate } from "react-router-dom";
-
 import LoginForm from "./components/LoginForm";
 import Home from "./components/Home";
 import Products from "./components/Products";
@@ -101,27 +98,16 @@ class App extends Component {
       >
         <Switch>
           <Route exact path="/login" component={LoginForm} />
-          {/* <Route exact path="/login" element={<LoginForm />} /> */}
           <ProtectedRoute exact path="/" component={Home} />
-          {/* <ProtectedRoute exact path="/" element={<Home />} /> */}
           <ProtectedRoute exact path="/products" component={Products} />
-          {/* <ProtectedRoute exact path="/products" element={<Products />} /> */}
           <ProtectedRoute
             exact
             path="/products/:id"
             component={ProductItemDetails}
           />
-          {/* <ProtectedRoute
-            exact
-            path="/products/:id"
-            element={<ProductItemDetails />}
-          /> */}
           <ProtectedRoute exact path="/cart" component={Cart} />
-          {/* <ProtectedRoute exact path="/cart" element={<Cart />} /> */}
           <Route path="/not-found" component={NotFound} />
-          {/* <Route path="/not-found" component={<NotFound />} /> */}
           <Redirect to="not-found" />
-          {/* <Navigate to="not-found" /> */}
         </Switch>
       </CartContext.Provider>
     );
